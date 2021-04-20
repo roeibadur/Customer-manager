@@ -54,7 +54,7 @@ export class AuthEffects {
     authSignup = this.action$.pipe(
      ofType(AuthActions.SIGNUP_START),
      switchMap((signupAction: AuthActions.SignupStart) => {
-        return this.http.post<AuthResponseData>('http://localhost:3000/Users/Signup',
+        return this.http.post<AuthResponseData>('https://roeibadur-customer-manager.herokuapp.com/Users/Signup',
        {
          email: signupAction.payload.email,
          password: signupAction.payload.password
@@ -72,7 +72,7 @@ export class AuthEffects {
    authSignin = this.action$.pipe(
       ofType(AuthActions.LOGIN_START),
       switchMap((authData: AuthActions.LoginStart) => {
-        return this.http.post<AuthResponseData>('http://localhost:3000/Users/Signin', {
+        return this.http.post<AuthResponseData>('https://roeibadur-customer-manager.herokuapp.com/Users/Signin', {
             email: authData.payload.email,
             password: authData.payload.password
           }).pipe(map(resData => {

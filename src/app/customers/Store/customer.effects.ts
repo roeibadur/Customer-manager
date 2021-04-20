@@ -13,7 +13,7 @@ export class CustomerEffects {
       ofType(CustomerActions.GET_CUSTOMERS),
       switchMap(() => {
         return this.http.get <Customer []>(
-          'http://localhost:3000/Customers');
+          'https://roeibadur-customer-manager.herokuapp.com/Customers');
       }),
       map(customers => {
         return new CustomerActions.SetCustomer(customers);
@@ -24,7 +24,7 @@ export class CustomerEffects {
     ofType(CustomerActions.STRING_CUSTOMERS),
     withLatestFrom(this.store.select('customers')),
     switchMap(([actionData , customerState]) => {
-      return this.http.put('http://localhost:3000/Customers/Update',
+      return this.http.put('https://roeibadur-customer-manager.herokuapp.com/Customers/Update',
       customerState.customers);
     })
    );
