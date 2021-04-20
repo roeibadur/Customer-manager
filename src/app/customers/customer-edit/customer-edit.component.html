@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="left-container">
+    <img [src]="this.customer.imagePath">
+  </div>
+  <div class="right-container">
+    <form (ngSubmit)="Onsubmit()" [formGroup]="customerForm">
+      <label for="firstname">First Name </label><br>
+      <input type="text"
+      class="form-cintrol"
+      formControlName="firstName"
+      id="firstName"><br>
+      <label for="lastname">Last Name </label><br>
+      <input type="text"
+      class="form-cintrol"
+      formControlName="lastName"
+      id="lastName"><br>
+      <label for="city">City </label><br>
+      <input type="text"
+      class="form-cintrol"
+      formControlName="city"
+      id="city"><br>
+      <label for="country">Country </label><br>
+      <select id="country" formControlName = "country" class="form-cintrol">
+        <option value="Israel">Israel</option>
+        <option value="England">England</option>
+        <option value="USA">USA</option>
+        <option value="Spain">Spain</option>
+      </select>
+      <div formArrayName="orders">
+        <div class="row" *ngFor="let order of controls; let i = index" [formGroupName]="i">
+          <label for="orderName">Order Name:</label>
+          <input type="text" formControlName="name">
+          <label for="orderName">Price:</label>
+          <input type="number" formControlName="price">
+          <button type="button" class="btn btn-danger" (click)="RemoveOrder(i)">X</button>
+        </div>
+      </div>
+      <button type="button" class="btn btn-success" (click)="AddOrder()">Add Order</button><br>
+      <button type="button" class="btn btn-danger" (click)="OnCancel()"> Cancel </button>
+      <button type="button" class="btn btn-danger" (click)="OnDelete()"> Delete </button>
+      <button type="submit" class="btn btn-success" [disabled]="!this.customerForm.valid"> Save </button>
+    </form>
+  </div>
+</div>

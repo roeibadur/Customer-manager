@@ -1,0 +1,37 @@
+table {
+  width: 100%;
+}
+tr:nth-child(odd) {
+  background-color: rgb(240, 234, 234);
+}
+#first {
+  border-bottom-style: ridge;
+  border-bottom-color: rgb(152 ,152, 152);
+}
+tr {
+  border-bottom: ridge rgb(233, 233, 233) 1px;
+}
+td {
+  padding: 20px;
+}
+.mat-form-field {
+  font-size: 14px;
+  width: 18%;
+  float: right;
+}
+img {
+  height: 50px;
+  width: 50px;
+}
+th
+{
+  color:black;
+  size: 20px;
+  background-color: white;
+  font-weight: bold;
+  border-bottom-style: ridge;
+  border-bottom-color: rgb(152 ,152, 152);
+}
+a {
+  cursor: pointer;
+}

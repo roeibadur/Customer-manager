@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.container-left {
+  flex-basis: 50%;
+
+}
+.container-right {
+  flex-basis: 50%;
+}
+hr {
+  border-top: 2px solid black;
+}

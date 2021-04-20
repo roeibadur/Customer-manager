@@ -1,0 +1,14 @@
+<div *ngIf="cardMode">
+<input type="text" class="search" placeholder="Search Customer" [(ngModel)]="searchText">
+</div>
+<br>
+<div *ngIf="cardMode" class="containers">
+    <app-customer-item *ngFor="let customerEl of customers | filter: searchText
+     let i=index;"
+    [customer]="customerEl"
+    [index]="i"></app-customer-item>
+</div>
+
+<div *ngIf="listMode">
+  <app-customers-table></app-customers-table>
+</div>

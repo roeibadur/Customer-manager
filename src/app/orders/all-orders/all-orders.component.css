@@ -1,0 +1,28 @@
+h4 {
+  font-weight: bold;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.inisdeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.header {
+  flex-basis: 30%;
+}
+.body {
+  flex-basis: 70%;
+}
+
+h3 {
+  align-self: center;
+  font-weight: bold;
+  float: center;
+}
+hr {
+  border-top:solid black 2px;
+}

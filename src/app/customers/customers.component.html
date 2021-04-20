@@ -1,0 +1,20 @@
+<app-new-customer *ngIf="addCustomer" (close)="newCustomer()"></app-new-customer>
+<div class="container">
+<img src="../../assets/images/usericon.png">
+<label style="cursor: auto;">Customers</label>
+</div>
+<br><br>
+<div class="container">
+  <div class="left-container">
+    <img src ="../../assets/images/cardViewIcon.png" alt="Card View" (click)="OnCardView()" style="cursor: pointer;">
+    <label (click)="OnCardView()" routerLinkActive = "active">Card View</label>
+    <img src="../../assets/images/listicon.png" alt="List View" (click)="OnListView()" style="cursor: pointer;">
+    <label (click)="OnListView()">List View</label>
+    <img src="../../assets/images/addicon.png" alt="New Customer" *ngIf="isLogin" (click)="newCustomer()" style="cursor: pointer;">
+    <label (click)="newCustomer()" *ngIf="isLogin">New Customer</label>
+  </div>
+</div>
+<br>
+<div>
+ <router-outlet></router-outlet>
+</div>

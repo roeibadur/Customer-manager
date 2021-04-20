@@ -1,0 +1,24 @@
+.containers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+a {
+  cursor: pointer;
+}
+
+.search{
+  border: none;
+  border-bottom: 1px solid black;
+  float: right;
+}
+
+.search:focus {
+  outline: none;
+}

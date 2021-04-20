@@ -1,0 +1,39 @@
+<app-alert [message]="error" *ngIf="error" (close)="onHandleError()"></app-alert>
+<form (ngSubmit)="OnSubmit(form)" #form="ngForm">
+<table>
+  <tr>
+    <td> Email:</td>
+    <td>
+       <input type="text" class= "form-control" name="email"
+       required
+       ngModel
+       #email="ngModel"
+       email [ngClass]="email.valid? 'valid' : 'not-valid'">
+     </td>
+  </tr>
+  <tr>
+    <td> Password:</td>
+    <td>
+      <input type="password" class="form-control" name="password"
+      required
+      ngModel
+      #password="ngModel"
+      [ngClass]="password.valid? 'valid' : 'not-valid'">
+    </td>
+  </tr>
+  <tr>
+    <td> Confirm Password:</td>
+    <td>
+      <input type="password" class="form-control" name="password2"
+      required
+      ngModel
+      #password2="ngModel"
+      [ngClass]="password2.valid? 'valid' : 'not-valid'">
+    </td>
+  </tr>
+  <tr>
+    <td><button type="submit" class="btn btn-success" [disabled]="!form.valid">Signup</button></td>
+    <td><button type="button" class="btn btn-success" (click)="OnCancel()">Cancel</button></td>
+  </tr>
+</table>
+</form>

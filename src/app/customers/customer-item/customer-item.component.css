@@ -1,0 +1,53 @@
+.head {
+  display: flex;
+  flex-direction: row;
+  background-color:#478ddd;
+  font-size: medium;
+  color:white;
+  height: 30%;
+}
+
+span {
+  align-items: center;
+  justify-items: center;
+  flex-basis: 80%;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  font-size: 150%;
+}
+
+#pencil {
+  height: 85%;
+  padding-top: 3%;
+  padding-left: 5%;
+  cursor: pointer;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-left {
+  flex-basis: 30%;
+  padding-top: 5%;
+}
+
+.container-right {
+  flex-basis: 70%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+.template {
+  height: 130px;
+  width: 200px;
+  border-color: rgb(230, 227, 227);
+  border-style: ridge;
+  margin: 20px;
+}
+
+a {
+  cursor: pointer;
+}

@@ -1,0 +1,38 @@
+<app-alert [message]="error" *ngIf="error" (close)="onHandleError()"></app-alert>
+<div>
+  <img src="../../assets/images/lock.jfif">
+  <label>Login</label>
+</div>
+<br>
+<div class="left-container">
+<form (ngSubmit)="OnSubmit(f)" #f="ngForm">
+  <table>
+    <tr>
+      <td> Email: </td>
+      <td> <input type="text"
+      ngModel
+      name="email"
+      required
+      email
+      #email="ngModel"
+      [ngClass]="email.valid? 'valid' : 'not-valid'"></td>
+    </tr>
+    <tr>
+      <td> Password: </td>
+      <td> <input type="password"
+      ngModel
+      name="password"
+      required
+      class="from-control"
+      #password="ngModel"
+      [ngClass]="password.valid? 'valid' : 'not-valid'"></td>
+    </tr>
+    <tr>
+      <td><p><b>if you don't have account ? </b><a (click)="OnSignup()">signup here</a></p></td>
+      <td></td>
+      <td style="float: right;"> <button type="submit" class="btn btn-success" [disabled]="!f.valid">Login</button></td>
+    <tr>
+  </table>
+</form>
+</div>
+

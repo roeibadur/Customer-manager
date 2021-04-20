@@ -1,0 +1,23 @@
+img {
+  width: 3%;
+  height: 3%;
+}
+td {
+  padding: 10px;
+}
+input {
+
+  padding-left: 5%;
+  width: 150%;
+}
+.valid {
+  border: ridge rgb(230, 227, 227) 1px;
+  border-left: solid rgb(12, 191, 12) 5px;
+}
+.not-valid {
+  border: ridge rgb(230, 227, 227) 1px;
+  border-left: solid rgb(241, 6, 45) 5px;
+}
+a {
+  cursor: pointer;
+}

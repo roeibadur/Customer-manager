@@ -1,0 +1,28 @@
+img {
+  height: 85px;
+  width: 80px;
+  padding-right: 0px;
+  cursor: pointer;
+}
+.navbar-default {
+  background-color: #478ddd;
+}
+.navbar {
+  min-height: 80px;
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+div a {
+  color: white;
+}
+li {
+  padding: 20px;
+  cursor: pointer;
+}
+
+
+

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="left-container">
+    <img [src]="this.customer.imagePath">
+  </div>
+  <div class="right-container">
+    <h3>{{this.customer.firstName}} {{this.customer.lastName}} orders:</h3>
+    <table>
+      <div *ngIf="this.customer.orders">
+        <tr *ngFor ="let item of customer.orders">
+          <td>{{item.name}}</td>
+          <td>{{item.price + '$'}}</td>
+        </tr>
+        <td><hr></td>
+        <td><hr></td>
+        <tr>
+          <td>Total Price:</td>
+          <td>{{this.customer.orderTotal + '$'}}</td>
+        </tr>
+      </div>
+      <div *ngIf="this.customer.orderTotal === 0">
+        <p><b>Don't have Orders!</b></p>
+      </div>
+      <br>
+    </table>
+  </div>
+</div>

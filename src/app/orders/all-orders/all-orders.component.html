@@ -1,0 +1,31 @@
+<div class="container">
+  <h3>All Orders</h3>
+  <br><br>
+  <div *ngFor = "let customer of customers; let i = index;" class="inisdeContainer">
+  <table>
+    <tr>
+    <td class="header"><h4>{{customer.firstName}} {{customer.lastName}}</h4></td>
+    </tr>
+    <div class="body">
+      <div *ngIf="customer.orders">
+        <tr *ngFor ="let item of customer.orders">
+          <td>{{item.name}}</td>
+          <td>{{item.price + '$'}}</td>
+        </tr>
+        <td><hr></td>
+        <td><hr></td>
+        <tr>
+          <td>Total Price:</td>
+          <td>{{'$' + this.customer.orderTotal}}</td>
+        </tr>
+      </div>
+      <div *ngIf="this.customer.orderTotal === 0">
+        <tr>
+          <td><b> don't have orders!</b></td>
+        </tr>
+      </div>
+    </div>
+    <br>
+  </table>
+  </div>
+</div>

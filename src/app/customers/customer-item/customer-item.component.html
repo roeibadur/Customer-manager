@@ -1,0 +1,15 @@
+<div class="template">
+  <div class="head">
+    <span id="name"> {{customer.firstName}} {{customer.lastName}} </span>
+    <img src="../../../assets/images/editIcon.png" (click)="OnEdit()" *ngIf="isLogin" id="pencil">
+  </div>
+  <div class="details">
+    <div class="container-left">
+      <img [src]= customer.imagePath id="customer.firstName" alt="photo" style="width: 90%;height: 90%;">
+    </div>
+    <div class="container-right">
+      {{customer.city}},{{customer.country}}<br>
+      <a (click)="OnOrder()">view orders</a>
+    </div>
+  </div>
+</div>

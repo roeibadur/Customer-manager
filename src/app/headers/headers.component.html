@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="/"><img src="../../assets/images/usersIcon.png" alt="usersIcon"></a>
+      <a routerLink="/" class="navbar-brand" rounterLinkActive="active" >Customer Manager</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myDIV">
+      <ul class="nav navbar-nav">
+        <li routerLink="/customers/customers-list"><a routerLinkActive="active">Customers</a></li>
+        <li routerLink="/orders"><a routerLinkActive="active">Orders</a></li>
+        <li routerLink="/about"><a routerLinkActive="active">About</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right ">
+          <li rounterLinkActive="active" *ngIf="!isLogin" routerLink="/auth"><a>Login</a></li>
+          <li *ngIf="isLogin" (click)="OnLogout()"><a>Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
